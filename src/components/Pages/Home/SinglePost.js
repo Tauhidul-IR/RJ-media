@@ -6,7 +6,7 @@ const SinglePost = ({ posts }) => {
     const shortDetails = post.slice(0, 50);
     return (
         <div>
-            <div className="card w-full md:w-96 bg-base-100 shadow-xl">
+            <div className="card w-full  bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <img src={posts?.img} alt="Shoes" className="rounded-xl w-72 h-52" />
                 </figure>

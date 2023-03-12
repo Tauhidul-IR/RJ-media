@@ -30,7 +30,7 @@ const SingUp = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        saveUser(data.email, data.name, data.university, data.address)
+                        saveUser(data.email, data.name)
                         // navigate('/');
 
                     })
@@ -43,9 +43,9 @@ const SingUp = () => {
     }
 
 
-    const saveUser = (email, name, university, address) => {
-        const user = { email, name, university, address };
-        fetch('https://social-media-server-opal.vercel.app/users', {
+    const saveUser = (email, name) => {
+        const user = { email, name };
+        fetch('http://localhost:4000/users', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -103,35 +103,6 @@ const SingUp = () => {
 
                     </div>
                     {/* --------------Name---------------------------------- */}
-
-
-                    {/* --------------Name---------------------------------- */}
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label"><span className="label-text font-bold">Your University</span></label>
-                        <input
-                            {...register("university", {
-                                required: 'Name Must Given.'
-                            })}
-                            type="text" className="input input-bordered w-full max-w-xs" />
-                        {errors.name && <p className='text-red-500'>{errors.name?.message}</p>}
-
-                    </div>
-                    {/* --------------Name---------------------------------- */}
-
-
-                    {/* --------------Name---------------------------------- */}
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label"><span className="label-text font-bold">Your Address</span></label>
-                        <input
-                            {...register("address", {
-                                required: 'Name Must Given.'
-                            })}
-                            type="text" className="input input-bordered w-full max-w-xs" />
-                        {errors.name && <p className='text-red-500'>{errors.name?.message}</p>}
-
-                    </div>
-                    {/* --------------Name---------------------------------- */}
-
 
 
 

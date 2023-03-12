@@ -22,10 +22,11 @@ const Navbar = () => {
         <li><Link to={'/'}>Home</Link></li>
 
         <li><Link to={'/posts'}>Media</Link></li>
-        <li><Link to={'#'}>Notification</Link></li>
+
         {
             user?.uid ? <>
                 <li><Link to={'/about'}>About</Link></li>
+                <li><Link to={'/dashboard'}>DashBoard</Link></li>
                 <li><Link onClick={handlelogout} to={'/Login'}>SignOut</Link></li>
             </> : <li><Link to={'/Login'}>Login</Link></li>
         }

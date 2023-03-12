@@ -19,7 +19,7 @@ const Posts = () => {
             img: img,
             love: love + 1
         }
-        fetch(`https://social-media-server-opal.vercel.app/allPosts/${_id}`, {
+        fetch(`http://localhost:4000/allPosts/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -43,7 +43,7 @@ const Posts = () => {
     const { data: allPosts = [], refetch, isLoading } = useQuery({
         queryKey: ['allPost'],
         queryFn: async () => {
-            const res = await fetch('https://social-media-server-opal.vercel.app/allPosts');
+            const res = await fetch('http://localhost:4000/allPosts');
             const data = await res.json();
             return data;
         }
@@ -57,9 +57,9 @@ const Posts = () => {
 
     return (
         <div>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3'>
+            <div className='grid grid-cols-1  gap-4'>
                 {
-                    allPosts.map(post => <div className="card w-full md:w-96 bg-base-100 shadow-xl">
+                    allPosts.map(post => <div className="card w-full bg-base-100 shadow-xl">
                         <figure className="px-10 pt-10">
                             <img src={post?.img} alt="Shoes" className="rounded-xl w-72 h-52" />
                         </figure>

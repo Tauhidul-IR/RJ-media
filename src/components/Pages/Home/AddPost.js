@@ -41,7 +41,7 @@ const AddPost = () => {
                         console.log(postDetails);
 
 
-                        fetch('https://social-media-server-opal.vercel.app/addPost', {
+                        fetch('http://localhost:4000/addPost', {
                             method: "POST",
                             headers: {
                                 'content-type': 'application/json'
