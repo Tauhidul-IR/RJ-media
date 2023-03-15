@@ -53,12 +53,6 @@ const Navbar = () => {
                 <div className="navbar-end">
 
                     <div className="w-5 rounded-full">
-
-                        {/* <div className="tooltip tooltip-open tooltip-bottom" data-tip="name">
-                            <button className="">
-                                
-                            </button>
-                        </div> */}
                         <div className="tooltip tooltip-bottom" data-tip={user?.uid ? name : "No user"}>
                             <button className="">{
                                 user?.uid ? <FaUser></FaUser> : <FaUserTimes></FaUserTimes>

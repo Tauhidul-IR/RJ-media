@@ -48,6 +48,8 @@ const Login = () => {
     return (
         <div className='h-[800px] flex justify-center items-center'>
             <div className='w-96 p-7'>
+                <h4>user:admin@admin.com</h4>
+                <h4>pass:admin@admin.com</h4>
 
                 {/* -----------------Start Form------------------ */}
                 <form onSubmit={handleSubmit(handleLogin)}>

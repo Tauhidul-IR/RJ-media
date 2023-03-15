@@ -14,7 +14,6 @@ const AllPosts = () => {
         }
     });
 
-    // console.log(allPosts);
 
 
     const handleDelete = (post) => {
