@@ -25,7 +25,6 @@ const Navbar = () => {
 
         {
             user?.uid ? <>
-                <li><Link to={'/about'}>About</Link></li>
                 <li><Link to={'/dashboard'}>DashBoard</Link></li>
                 <li><Link onClick={handlelogout} to={'/Login'}>SignOut</Link></li>
             </> : <li><Link to={'/Login'}>Login</Link></li>
@@ -44,7 +43,7 @@ const Navbar = () => {
                             {navItem}
                         </ul>
                     </div>
-                    <Link className="btn btn-ghost normal-case text-indigo-800 text-3xl font-bold">Message-Book</Link>
+                    <Link className="btn btn-ghost normal-case text-indigo-800 text-3xl font-bold">RJ-Media</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

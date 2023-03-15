@@ -22,10 +22,6 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/about',
-                element: <About></About>
-            },
-            {
                 path: '/login',
                 element: <Login></Login>
             },
@@ -40,7 +36,7 @@ const router = createBrowserRouter([
             {
                 path: '/posts/:id',
                 element: <PrivateRoute><PostDetails></PostDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:4000/posts/${params.id}`)
+                loader: ({ params }) => fetch(`https://social-media-server-tauhidul-ir.vercel.app/posts/${params.id}`)
             }
         ]
     },

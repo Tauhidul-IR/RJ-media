@@ -19,7 +19,7 @@ const Posts = () => {
             img: img,
             love: love + 1
         }
-        fetch(`http://localhost:4000/allPosts/${_id}`, {
+        fetch(`https://social-media-server-tauhidul-ir.vercel.app/allPosts/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -43,7 +43,7 @@ const Posts = () => {
     const { data: allPosts = [], refetch, isLoading } = useQuery({
         queryKey: ['allPost'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:4000/allPosts');
+            const res = await fetch('https://social-media-server-tauhidul-ir.vercel.app/allPosts');
             const data = await res.json();
             return data;
         }

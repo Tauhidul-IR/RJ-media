@@ -45,7 +45,7 @@ const SingUp = () => {
 
     const saveUser = (email, name) => {
         const user = { email, name };
-        fetch('http://localhost:4000/users', {
+        fetch('https://social-media-server-tauhidul-ir.vercel.app/users', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
